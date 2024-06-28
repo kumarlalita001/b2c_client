@@ -1,0 +1,400 @@
+.navBar {
+  position: sticky;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10vh;
+  /* margin: 0px 40px; */
+  font-weight: 500;
+  padding: 0px 30px;
+  /* color: black; */
+  color: white;
+  background-color: rgba(15, 15, 15, 0.974);
+  z-index: 40;
+  box-shadow: rgb(155, 146, 39);
+}
+
+.centerNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  height: 25px;
+  width: 25px;
+  color: white;
+  padding: 0;
+}
+
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.logo img {
+  object-fit: cover;
+  height: 75px;
+  width: auto;
+  padding: 10px;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  /* margin-top: 10px; */
+}
+
+.navToggleButton {
+  border: none;
+  background: transparent;
+  display: none;
+}
+
+.navToggleButton img {
+  width: 24px;
+}
+
+.navButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-right: 50px;
+  margin-left: 80px;
+}
+
+.loginButton,
+.registerButton {
+  transition: transform 0.5s ease;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.registerButton {
+  background-color: #bfa55b;
+  color: black;
+}
+
+.loginButton:hover {
+  background-color: #bfa55b;
+  transform: scale(1.1);
+  color: white;
+}
+
+.registerButton:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.navDiv {
+  padding: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navDiv:hover {
+  color: #bfa55b;
+}
+
+.hireButton {
+  padding: 7px 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  /* background-color: #bfa55b; */
+  background-image: linear-gradient(to bottom right, #ffd700, #ffffff);
+  color: black;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: all 0.7s;
+}
+/* .hireButton:hover {
+  background-color: white;
+  color: #bfa55b;
+  transform: scale(1.05);
+  animation: bounce 0.5s infinite;
+} */
+.hireButton:hover {
+  background-image: linear-gradient(to bottom right, #ffd700, #333333);
+  color: #ffd700;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+  animation: bounce 0.5s infinite;
+}
+.hireButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.hireButton span::after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.hireButton:hover span {
+  padding-right: 25px;
+}
+.hireButton:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.dropdownButton {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+
+.arrow img {
+  margin-left: 10px;
+  height: 20px;
+  margin-top: 0px;
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+.dropdown:hover .arrow img {
+  transform: rotate(0deg);
+}
+
+.dropdown {
+  position: relative;
+  font-weight: 400;
+  padding: 15px;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.975);
+  color: white;
+  overflow: hidden;
+  width: 250px;
+  border-radius: 10px;
+  height: 0px;
+  padding: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(226, 222, 222, 0.557);
+  z-index: 1;
+  animation-duration: 0.8s;
+  animation-name: slideDown;
+  background-color: (15, 15, 15, 0.974);
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: 140px;
+  }
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+  animation-fill-mode: forwards;
+}
+
+.dropdownButton:hover {
+  border-radius: 20px;
+  color: #bfa55b;
+}
+
+.list {
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 0px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.list img {
+  margin: 5px;
+  margin-left: 10px;
+  height: 25px;
+}
+
+.list a {
+  padding: 10px 30px;
+}
+
+@media only screen and (max-width: 1350px) {
+  .centerNav {
+    /* display: none; */
+    position: absolute;
+    top: calc(100%);
+    left: 0;
+    font-size: 18px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color: black;
+  }
+  .arrow img {
+    color: black;
+  }
+  .logo {
+    margin-left: 0;
+    display: flex;
+  }
+  .logo img {
+    margin-left: 0;
+  }
+  .logo p {
+    margin-top: 10px;
+  }
+  .navBar {
+    display: flex;
+    height: 10vh;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    /* align-items: flex-start; */
+    z-index: 1;
+  }
+  .navBar .centerNav {
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #bfa55b;
+    opacity: 0.5;
+  }
+  .navButtons {
+    padding: 10px;
+    padding-top: 25px;
+    margin: 0px;
+    gap: 15px;
+  }
+  .navDiv:hover {
+    color: #bfa55b;
+    transform: scale(1.1);
+  }
+  .loginButton {
+    background-color: #bfa55b;
+  }
+
+  .dropdown:hover .dropdownContent.open {
+    display: block;
+    animation-fill-mode: forwards;
+  }
+  .navDiv {
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 20px;
+  }
+  .dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px;
+    border-radius: 20px;
+  }
+  .arrow img {
+    margin-left: 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+    transform: rotate(-90deg);
+  }
+  .dropdown:hover .arrow img {
+    transform: rotate(0deg);
+  }
+  .dropdownButton {
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    color: white;
+    position: relative;
+  }
+
+  .dropdownContent {
+    width: 28%;
+    position: absolute;
+    top: calc(100%);
+    right: 3rem;
+  }
+
+  @keyframes slideDown {
+    from {
+      height: 0;
+    }
+    to {
+      height: 90px;
+    }
+  }
+
+  .list {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    padding: 1px;
+    margin: 0px;
+  }
+  .list a {
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  .list img {
+    height: 20px;
+  }
+  .navToggleButton {
+    border: none;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    padding: 20px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    display: flex;
+  }
+
+  .navToggleButton img {
+    width: 40px;
+    height: 50px;
+  }
+
+  .navToggleButton.active img {
+    transform: none;
+  }
+
+  .centerNav {
+    transition: all 0.3s ease;
+  }
+}

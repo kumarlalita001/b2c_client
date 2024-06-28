@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: black;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 50s linear infinite;
+}
+
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover .faq-arrow {
+  transform: rotate(0deg);
+}
+.faq-answer {
+  display: none;
+  font-size: 17px;
+  /* Hide answer by default */
+}
+
+.faq-item:hover .faq-answer {
+  display: block;
+}
+
+.icon{
+  width: 24px;
+  height: 24px;
+}
+
+.app {
+  padding: 10px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flair {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+}
+
+
+.animated-img {
+  animation: moveY 2s infinite alternate;
+  left: -160px; /* Initial left position */
+  top: 13rem;
+  
+  /* Change the duration (2s) and other properties as needed */
+}
+
+.animate-img {
+  animation: moveX 1.5s infinite alternate;
+}
+
+.animate {
+  animation: moveZ 1.5s infinite alternate;
+}
+
+.animate-image{
+  animation: animate-image 4s infinite alternate;
+
+}
+
+
+.animated{
+  animation: animated 2s infinite alternate;
+
+}
+
+
+
+@keyframes text {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes animated {
+  from {
+    transform: translateY(-20px);
+  }
+
+  to {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes animate {
+  from {
+    transform: translateX(-20px);
+  }
+
+  to {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes animate-image{
+  from{
+    transform: translateX(-40px);
+  }
+  to{
+    transform: translateX(40px);
+  }
+}
+
+@keyframes moveY {
+  from {
+    transform: translateY(-20px);
+  }
+
+  to {
+    transform: translateY(20px);
+    /* Adjust the distance to move */
+  }
+}
+
+@keyframes moveX {
+  from {
+    transform: translateX(-20px);
+  }
+
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes moveZ {
+  from {
+    transform: translateX(-20px);
+  }
+
+  to {
+    transform: translateY(20px);
+  }
+}
+
+.animate-moveUpDown{
+  animation: animate-moveUpDown 2.5s infinite alternate;
+}
+
+@keyframes animate-moveUpDown{
+  from{
+    transform: translateY(-30px);
+  }
+  to{
+    transform: translateX(20px);
+  }
+}
+
+
